@@ -6,4 +6,6 @@
 E.g. lets initialize a grid of random integers.
 
 We need a `Genrator (List (List Int))` (it's pretty much the same
-for other representations of a grid, such as
+for other representations of a grid: arrays of arrays, etc).
+
+
