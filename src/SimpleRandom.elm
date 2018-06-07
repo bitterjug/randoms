@@ -49,3 +49,14 @@ int low high =
     in
     next
         |> map (\n -> round (n * range + offset))
+
+
+bool : Generator Bool
+bool =
+    next
+        |> map ((>) 0.5)
+
+
+list : Int -> Generator a -> Generator (List a)
+list count g =
+    next |> map (always [])
