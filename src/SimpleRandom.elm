@@ -106,5 +106,8 @@ apply =
 
 
 list : Int -> Generator a -> Generator (List a)
-list count g =
-    next |> map (always [])
+list n g =
+    if n == 0 then
+        lift []
+    else
+        map2 (::) g (list (n - 1) g)
