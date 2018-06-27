@@ -7,7 +7,6 @@ import Random exposing (Generator)
 (=>) : a -> b -> ( a, b )
 (=>) =
     (,)
-infixl 0 =>
 
 
 main : Program Never Grid Msg
@@ -55,8 +54,9 @@ gridgen =
 
 
 update : Grid -> Grid -> ( Grid, Cmd Msg )
-update newGrid model =
-    newGrid => Cmd.none
+update newGrid _ =
+    newGrid
+        => Cmd.none
 
 
 view : Grid -> Html.Html Msg
