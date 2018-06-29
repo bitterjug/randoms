@@ -120,8 +120,8 @@ apply =
 {-| this is unit/return/lift
 Like 'succeed' for parsers.
 NOT like generate in the Elm random library.
-
-Use it to "generate" non-random functions
+This generates _random_ functions in the sense that you give it a pool of functions, 
+of size 1, and it "randomely" picks one of those/that one.
 
 -}
 generate : a -> Generator a
